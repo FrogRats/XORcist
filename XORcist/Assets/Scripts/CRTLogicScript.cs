@@ -15,17 +15,20 @@ public class CRTLogicScript : MonoBehaviour
     [Header("CRT Button")]
     [SerializeField] private Button CRTButton;
 
-    public string currentGate;
+    private string currentGate;
+    private ORGate ORGateScript;
+    private ANDGate ANDGateScript;
+    private bool changedGate;
 
     // Update is called once per frame
     void Awake()
     {
         CRTButton.onClick.AddListener(SwitchCRTScreen);
+        changedGate= false;
     }
 
     private void SwitchCRTScreen()
     {
-        Debug.Log(Gates.Length);
 
         for (int i = 0; i < Gates.Length; i++)
         {
@@ -49,7 +52,24 @@ public class CRTLogicScript : MonoBehaviour
         }
     }
 
-    public string getCurrentGate() {
-        return currentGate;
+    public bool getCurrentGateOutput(bool inputA, bool inputB) {
+
+        switch (currentGate) {
+
+            case "ORGate":
+                ORGateScript = Gates[1].GetComponent<ORGate>();
+                return ORGateScript.GetOutput(inputA, inputB);
+
+            case "ANDGate":
+                ANDGateScript = Gates[2].GetComponent<ANDGate>();
+                return ANDGateScript.GetOutput(inputA, inputB);
+
+            default: return false;
+
+        }
+    }
+
+    public bool getGateButtonStatus() {
+        return changedGate;
     }
 }
