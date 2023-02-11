@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ANDGate : MonoBehaviour
+public class ANDGate : Gate
 {
-    public bool GetOutput(bool a, bool b) 
+    public override bool GetOutput(bool a, bool b) 
     {
         if (a == true && b == true)
         {
