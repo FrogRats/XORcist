@@ -15,10 +15,12 @@ public class CRTLogicScript : MonoBehaviour
     [Header("CRT Button")]
     [SerializeField] private Button CRTButton;
 
-    private string currentGate;
+    private string currentGateName;
+    private Image currentGate;
     private ORGate ORGateScript;
     private ANDGate ANDGateScript;
     private bool changedGate;
+
 
     // Update is called once per frame
     void Awake()
@@ -39,12 +41,14 @@ public class CRTLogicScript : MonoBehaviour
                 if (i == Gates.Length - 1)
                 {
                     Gates[0].gameObject.SetActive(true);
-                    currentGate = Gates[0].name;
+                    currentGateName = Gates[0].name;
+                    currentGate = Gates[0];
                 }
                 else 
                 {
                     Gates[i + 1].gameObject.SetActive(true);
-                    currentGate = Gates[i + 1].name;
+                    currentGateName = Gates[i + 1].name;
+                    currentGate = Gates[i + 1];
                 }
 
                 break;
@@ -54,7 +58,7 @@ public class CRTLogicScript : MonoBehaviour
 
     public bool getCurrentGateOutput(bool inputA, bool inputB) {
 
-        switch (currentGate) {
+        switch (currentGateName) {
 
             case "ORGate":
                 ORGateScript = Gates[1].GetComponent<ORGate>();
@@ -64,7 +68,7 @@ public class CRTLogicScript : MonoBehaviour
                 ANDGateScript = Gates[2].GetComponent<ANDGate>();
                 return ANDGateScript.GetOutput(inputA, inputB);
 
-            default: return false;
+            default: return true;
 
         }
     }
