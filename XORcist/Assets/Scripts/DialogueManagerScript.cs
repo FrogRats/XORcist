@@ -29,6 +29,7 @@ public class DialogueManagerScript : MonoBehaviour
     private List<string> tags;
     private Story currentStory;
     private bool dialogueIsPlaying;
+    private string typewriterText;
 
     private static DialogueManagerScript instance;
 
@@ -99,7 +100,9 @@ public class DialogueManagerScript : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
+            //dialogueText.text = currentStory.Continue();
+            typewriterText = currentStory.Continue();
+            StartCoroutine("TypewriterText");
             DisplayChoices();
 
         }
@@ -154,6 +157,16 @@ public class DialogueManagerScript : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         yield return new WaitForEndOfFrame();
         EventSystem.current.SetSelectedGameObject(choices[0].gameObject);
+    }
+
+    private IEnumerator TypewriterText()
+    {
+        dialogueText.text = "";
+
+        foreach (char c in typewriterText){
+            dialogueText.text += c;
+            yield return new WaitForSeconds(0.02f);
+        }
     }
 
     public void MakeChoice(int choiceIndex)
