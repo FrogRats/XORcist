@@ -24,11 +24,6 @@ public class CRTLogicScript : MonoBehaviour
         CRTButton.onClick.AddListener(SwitchCRTScreen);
     }
 
-    public Gate getCurrentGate() 
-    {
-        return currentGate;
-    }
-
     private void SwitchCRTScreen()
     {
 
@@ -56,7 +51,7 @@ public class CRTLogicScript : MonoBehaviour
         }
     }
 
-    public bool getCurrentGateOutput(Gate currentGate, bool inputA, bool inputB) {
+    public bool getCurrentGateOutput(bool inputA, bool inputB) {
 
         return currentGate.GetOutput(inputA, inputB);
 

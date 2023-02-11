@@ -34,10 +34,10 @@ public class Level1Script : MonoBehaviour
 
     private void CRTMonitorLogic() {
         // First CRT Monitor
-        currentStatus = CRTScript.getCurrentGateOutput(CRTScript.getCurrentGate(), inputA, inputB);
+        currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
 
         // Second CRT Monitor
-        currentStatus = CRTScript2.getCurrentGateOutput(CRTScript.getCurrentGate(), currentStatus, inputC);
+        currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
 
         // Final NOT Gate
         currentStatus = !currentStatus;
