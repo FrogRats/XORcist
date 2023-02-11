@@ -18,7 +18,7 @@ public class ORGate : MonoBehaviour
 
     public bool GetOutput(bool a, bool b)
     {
-        if (a == true  b == true)
+        if (a == true || b == true)
         {
             return true;
         }
