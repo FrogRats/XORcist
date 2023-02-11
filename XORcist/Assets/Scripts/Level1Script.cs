@@ -11,6 +11,7 @@ public class Level1Script : MonoBehaviour
 
     [Header("Additional UI")]
     [SerializeField] Button ritualButton;
+    [SerializeField] Image successFlame;
 
     private CRTLogicScript CRTScript;
     private CRTLogicScript CRTScript2;
@@ -38,6 +39,10 @@ public class Level1Script : MonoBehaviour
         currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
 
         // Final NOT Gate
-        Debug.Log(!currentStatus);
+        currentStatus = !currentStatus;
+
+        if (currentStatus) {
+            successFlame.gameObject.SetActive(true);
+        }
     }
 }
