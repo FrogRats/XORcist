@@ -10,13 +10,14 @@ public class CRTLogicScript : MonoBehaviour
 {
 
     [Header("Gate Options")]
-    [SerializeField] private Image[] Gates;
+    [SerializeField] private Gate[] Gates;
 
     [Header("CRT Button")]
     [SerializeField] private Button CRTButton;
 
     private string currentGateName;
-    private Image currentGate;
+    private Gate currentGate;
+
     private Gate ORGate;
     private Gate ANDGate;
 
