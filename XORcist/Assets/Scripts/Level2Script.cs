@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Level2Script : MonoBehaviour
@@ -14,6 +15,7 @@ public class Level2Script : MonoBehaviour
 
     [Header("Additional UI")]
     [SerializeField] Button ritualButton;
+    [SerializeField] Image successFlame;
 
     private CRTLogicScript CRTScript;
     private CRTLogicScript CRTScript2;
@@ -57,6 +59,11 @@ public class Level2Script : MonoBehaviour
         // Fourth CRT Monitor
         currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, inputE);
 
-        Debug.Log(currentStatus);
+        if (currentStatus)
+        {
+            successFlame.gameObject.SetActive(true);
+
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

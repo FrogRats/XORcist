@@ -183,7 +183,9 @@ public class DialogueManagerScript : MonoBehaviour
     {
         currentStory.ObserveVariable("Show_NPC", (variableName, newValue) =>
         {
-            if ((bool) newValue) { NPCImage.gameObject.SetActive(true);}
+            if ((bool) newValue) { 
+                NPCImage.gameObject.SetActive(true);
+            }
             else { NPCImage.gameObject.SetActive(false);}
         });
 
