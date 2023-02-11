@@ -33,6 +33,3 @@ The ghost speaks with a hollow wail "My ChIlD! I KnEw YoU WoUlD CoMe! I am your 
 "Are you ready to join the family business child?"
     +[Sure?] 
 -> END
-
-== END ==
-"WONDERFUL! Let's begin ..."
