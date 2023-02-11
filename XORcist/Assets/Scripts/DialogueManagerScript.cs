@@ -15,6 +15,7 @@ public class DialogueManagerScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Button continueButton;
     [SerializeField] private Image NPCImage;
+    [SerializeField] private Image NPCImage2;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -83,6 +84,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialoguePanelPlayer.SetActive(true);
         LevelObj.SetActive(false);
         NPCImage.gameObject.SetActive(false);
+        NPCImage2.gameObject.SetActive(false);
 
         ContinueStory();
     }
@@ -94,6 +96,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialoguePanelPlayer.SetActive(false);
         LevelObj.SetActive(true);
         NPCImage.gameObject.SetActive(false);
+        NPCImage2.gameObject.SetActive(false);
         dialogueText.text = "";
     }
 
@@ -180,13 +183,14 @@ public class DialogueManagerScript : MonoBehaviour
     {
         currentStory.ObserveVariable("Show_NPC", (variableName, newValue) =>
         {
-            if ((bool) newValue)
-            {
-                NPCImage.gameObject.SetActive(true);
-            }
-            else {
-                NPCImage.gameObject.SetActive(false);
-            }
+            if ((bool) newValue) { NPCImage.gameObject.SetActive(true);}
+            else { NPCImage.gameObject.SetActive(false);}
+        });
+
+        currentStory.ObserveVariable("Show_NPC2", (variableName, newValue) =>
+        {
+            if ((bool)newValue) { NPCImage2.gameObject.SetActive(true); }
+            else { NPCImage.gameObject.SetActive(false); }
         });
     }
 }

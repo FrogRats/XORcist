@@ -1,4 +1,4 @@
-VAR Show_NPC1 = false
+VAR Show_NPC = false
 VAR Show_NPC2 = false
 
 -> Level_1_Outro_1
@@ -12,7 +12,7 @@ As you watch your eccentric uncle byte the dust, you figure you might be rather 
 -> Level_2_Intro_2
 
 == Level_2_Intro_2 == 
-~ Show_NPC1 = true
+~ Show_NPC = true
 "HELLO?!? Jeb??? I need you to hurry over immediately! It's happened again ..."
 -> Level_2_Intro_3
 
@@ -21,7 +21,7 @@ As you watch your eccentric uncle byte the dust, you figure you might be rather 
 -> Level_2_BadKarl_1
 
 == Level_2_BadKarl_1 ==
-~ Show_NPC1 = false
+~ Show_NPC = false
 Looks like our journey has only just begun.
 + [This'll be easy] -> Level_2_BadKarl_2
 + [I might need a few more minutes ... ] -> Level_2_BadKarl_1
