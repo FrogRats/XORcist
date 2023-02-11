@@ -20,6 +20,12 @@ public class CRTLogicScript : MonoBehaviour
     private ORGate ORGateScript;
     private ANDGate ANDGateScript;
 
+    // Update is called once per frame
+    void Awake()
+    {
+        CRTButton.onClick.AddListener(SwitchCRTScreen);
+    }
+
     private void SwitchCRTScreen()
     {
 
