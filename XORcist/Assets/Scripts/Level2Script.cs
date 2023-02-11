@@ -46,33 +46,24 @@ public class Level2Script : MonoBehaviour
     {
         // First CRT Monitor
         currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
-        Debug.Log("Gate 1: " + currentStatus);
 
         // Second CRT Monitor
         currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
-        Debug.Log("Gate 2: " + currentStatus);
 
         // NOT Inversion
         currentStatus = !currentStatus;
-        Debug.Log("Not: " + currentStatus);
 
         // Third CRT Monitor
         currentStatus = CRTScript3.getCurrentGateOutput(currentStatus, inputD);
-        Debug.Log("Gate 3: " + currentStatus);
 
         // Fourth CRT Monitor
         currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, inputE);
-        Debug.Log("Gate 4: " + currentStatus);
 
         if (currentStatus)
         {
             successFlame.gameObject.SetActive(true);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else {
-
-            Debug.Log("AAA");
         }
     }
 }
