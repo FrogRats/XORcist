@@ -161,11 +161,12 @@ public class DialogueManagerScript : MonoBehaviour
 
     private void UpdateStoryVariables()
     {
+        /*
         currentStory.ObserveVariable("Variable_Name_Here", (variableName, newValue) =>
         {
             tempUIItem1.text = newValue.ToString();
             tempUIItem1.fontSize = 14;
-        });
+        });*/
     }
 }
 
