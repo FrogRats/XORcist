@@ -36,8 +36,8 @@ public class Level2Script : MonoBehaviour
     {
         CRTScript = CRTMonitor1.GetComponent<CRTLogicScript>();
         CRTScript2 = CRTMonitor2.GetComponent<CRTLogicScript>();
-        CRTScript3 = CRTMonitor1.GetComponent<CRTLogicScript>();
-        CRTScript4 = CRTMonitor2.GetComponent<CRTLogicScript>();
+        CRTScript3 = CRTMonitor3.GetComponent<CRTLogicScript>();
+        CRTScript4 = CRTMonitor4.GetComponent<CRTLogicScript>();
 
         ritualButton.onClick.AddListener(CRTMonitorLogic);
     }
@@ -64,10 +64,6 @@ public class Level2Script : MonoBehaviour
             successFlame.gameObject.SetActive(true);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else {
-
-            Debug.Log("AAA");
         }
     }
 }
