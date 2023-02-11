@@ -54,11 +54,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gates:
-  - {fileID: 7499003206191637942}
-  - {fileID: 7499003206999096661}
-  - {fileID: 7499003205918004522}
+  - {fileID: 8678749827811926094}
+  - {fileID: 8373536395837790598}
+  - {fileID: 3854987594459665548}
   CRTButton: {fileID: 7499003207084957984}
-  currentGate: 
 --- !u!1 &7499003205918004523
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,6 +69,7 @@ GameObject:
   - component: {fileID: 7499003205918004520}
   - component: {fileID: 7499003205918004521}
   - component: {fileID: 7499003205918004522}
+  - component: {fileID: 3854987594459665548}
   m_Layer: 5
   m_Name: XORGate
   m_TagString: Untagged
@@ -135,6 +135,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3854987594459665548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499003205918004523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 051318f3827ec0844967b358c13f4840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7499003206191637945
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,6 +158,7 @@ GameObject:
   - component: {fileID: 7499003206191637944}
   - component: {fileID: 7499003206191637943}
   - component: {fileID: 7499003206191637942}
+  - component: {fileID: 8678749827811926094}
   m_Layer: 5
   m_Name: EmptyGate
   m_TagString: Untagged
@@ -211,6 +224,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8678749827811926094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499003206191637945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc14529c14776114fbbe0efa50984635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7499003206999096664
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +247,7 @@ GameObject:
   - component: {fileID: 7499003206999096663}
   - component: {fileID: 7499003206999096662}
   - component: {fileID: 7499003206999096661}
+  - component: {fileID: 8373536395837790598}
   m_Layer: 5
   m_Name: XNORGate
   m_TagString: Untagged
@@ -287,6 +313,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8373536395837790598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7499003206999096664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57fc2e7cb6563643917c7177dc8e0c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7499003207084957985
 GameObject:
   m_ObjectHideFlags: 0
