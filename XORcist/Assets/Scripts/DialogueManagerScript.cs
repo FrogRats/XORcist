@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Ink.Runtime;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogueManagerScript : MonoBehaviour
 {
@@ -107,8 +108,8 @@ public class DialogueManagerScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("Nothing left in the story");
             ExitDialogueMode();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
