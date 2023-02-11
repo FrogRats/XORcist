@@ -36,8 +36,8 @@ public class Level2Script : MonoBehaviour
     {
         CRTScript = CRTMonitor1.GetComponent<CRTLogicScript>();
         CRTScript2 = CRTMonitor2.GetComponent<CRTLogicScript>();
-        CRTScript3 = CRTMonitor1.GetComponent<CRTLogicScript>();
-        CRTScript4 = CRTMonitor2.GetComponent<CRTLogicScript>();
+        CRTScript3 = CRTMonitor3.GetComponent<CRTLogicScript>();
+        CRTScript4 = CRTMonitor4.GetComponent<CRTLogicScript>();
 
         ritualButton.onClick.AddListener(CRTMonitorLogic);
     }
@@ -46,18 +46,23 @@ public class Level2Script : MonoBehaviour
     {
         // First CRT Monitor
         currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
+        Debug.Log("Gate 1: " + currentStatus);
 
         // Second CRT Monitor
         currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
+        Debug.Log("Gate 2: " + currentStatus);
 
         // NOT Inversion
         currentStatus = !currentStatus;
+        Debug.Log("Not: " + currentStatus);
 
         // Third CRT Monitor
         currentStatus = CRTScript3.getCurrentGateOutput(currentStatus, inputD);
+        Debug.Log("Gate 3: " + currentStatus);
 
         // Fourth CRT Monitor
         currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, inputE);
+        Debug.Log("Gate 4: " + currentStatus);
 
         if (currentStatus)
         {

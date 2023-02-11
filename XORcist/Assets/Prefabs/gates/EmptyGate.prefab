@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5609667108806691858}
   - component: {fileID: 5609667108806691869}
   - component: {fileID: 5609667108806691868}
+  - component: {fileID: 26978113517324413}
   m_Layer: 5
   m_Name: EmptyGate
   m_TagString: Untagged
@@ -76,3 +77,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &26978113517324413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5609667108806691859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc14529c14776114fbbe0efa50984635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

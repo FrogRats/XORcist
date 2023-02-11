@@ -53,6 +53,7 @@ public class CRTLogicScript : MonoBehaviour
 
     public bool getCurrentGateOutput(bool inputA, bool inputB) {
 
+        Debug.Log(currentGate.name);
         return currentGate.GetOutput(inputA, inputB);
 
     }
