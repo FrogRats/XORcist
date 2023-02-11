@@ -42,14 +42,10 @@ public class Level1Script : MonoBehaviour
         // Final NOT Gate
         currentStatus = !currentStatus;
 
-<<<<<<< Updated upstream
         if (currentStatus) {
             successFlame.gameObject.SetActive(true);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-=======
-        Debug.Log(currentStatus);
->>>>>>> Stashed changes
     }
 }
