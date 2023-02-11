@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class XORGate : MonoBehaviour
+public class XORGate : Gate
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +15,7 @@ public class XORGate : MonoBehaviour
     {
         
     }
-    public bool GetOutput(bool a, bool b)
+    public override bool GetOutput(bool a, bool b)
     {
         if (!(a == true && b == true) && (a == true) || (b == true))
         {
