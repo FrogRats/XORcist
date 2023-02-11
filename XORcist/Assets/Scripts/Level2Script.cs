@@ -65,5 +65,9 @@ public class Level2Script : MonoBehaviour
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        else {
+
+            Debug.Log("AAA");
+        }
     }
 }

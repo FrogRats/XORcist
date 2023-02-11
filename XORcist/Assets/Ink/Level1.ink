@@ -1,4 +1,5 @@
 VAR Show_NPC = false
+VAR Show_NPC2 = false
 
 -> Level_1_Intro_1
 
