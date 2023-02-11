@@ -14,7 +14,7 @@ public class DialogueManagerScript : MonoBehaviour
     [SerializeField] private GameObject dialoguePanelPlayer;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Button continueButton;
-    //[SerializeField] private Image NPCImage;
+    [SerializeField] private Image NPCImage;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -24,7 +24,6 @@ public class DialogueManagerScript : MonoBehaviour
 
     private TextMeshProUGUI[] choicesText;
 
-    private List<string> tags;
     private Story currentStory;
     private bool dialogueIsPlaying;
     private string typewriterText;
@@ -83,7 +82,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialoguePanelNPC.SetActive(true);
         dialoguePanelPlayer.SetActive(true);
         LevelObj.SetActive(false);
-        //NPCImage.gameObject.SetActive(true);
+        NPCImage.gameObject.SetActive(false);
 
         ContinueStory();
     }
@@ -94,7 +93,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialoguePanelNPC.SetActive(false);
         dialoguePanelPlayer.SetActive(false);
         LevelObj.SetActive(true);
-        //NPCImage.gameObject.SetActive(false);
+        NPCImage.gameObject.SetActive(false);
         dialogueText.text = "";
     }
 
@@ -179,12 +178,16 @@ public class DialogueManagerScript : MonoBehaviour
 
     private void UpdateStoryVariables()
     {
-        /*
-        currentStory.ObserveVariable("Variable_Name_Here", (variableName, newValue) =>
+        currentStory.ObserveVariable("Show_NPC", (variableName, newValue) =>
         {
-            tempUIItem1.text = newValue.ToString();
-            tempUIItem1.fontSize = 14;
-        });*/
+            if ((bool) newValue)
+            {
+                NPCImage.gameObject.SetActive(true);
+            }
+            else {
+                NPCImage.gameObject.SetActive(false);
+            }
+        });
     }
 }
 
