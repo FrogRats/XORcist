@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NANDGate : MonoBehaviour
+public class NANDGate : Gate
 {
     // Start is called before the first frame update
     void Start()
@@ -16,7 +16,7 @@ public class NANDGate : MonoBehaviour
         
     }
 
-    public bool GetOutput(bool a, bool b)
+    public override bool GetOutput(bool a, bool b)
     {
         if (a == true && b == true)
         {
