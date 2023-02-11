@@ -16,7 +16,7 @@ public class Level1Script : MonoBehaviour
     private CRTLogicScript CRTScript2;
 
     private bool inputA = true;
-    private bool inputB = true;
+    private bool inputB = false;
     private bool inputC = false;
 
     private bool currentStatus;
@@ -31,8 +31,6 @@ public class Level1Script : MonoBehaviour
     }
 
     private void CRTMonitorLogic() {
-        Debug.ClearDeveloperConsole();
-
         // First CRT Monitor
         currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
         Debug.Log("First Monitor: " + currentStatus);
