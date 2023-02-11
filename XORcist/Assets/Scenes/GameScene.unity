@@ -164,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 168141579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0d9431d3ee1e3140b931d195f5392e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a35d46ff3245d4f945b3373bc1a0fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: bd530d5ed0e680d41adafe94d7eb1399, type: 3}
@@ -253,7 +253,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1953984852}
-        m_TargetAssemblyTypeName: DialogueManagerScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: IntroDialogueManager, Assembly-CSharp
         m_MethodName: MakeChoice
         m_Mode: 3
         m_Arguments:
@@ -823,7 +823,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1953984852}
-        m_TargetAssemblyTypeName: DialogueManagerScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: IntroDialogueManager, Assembly-CSharp
         m_MethodName: MakeChoice
         m_Mode: 3
         m_Arguments:
@@ -1348,7 +1348,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1953984850}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0fd96b3ebb12fb141bf3e881400b7d1e, type: 3}
+  m_Script: {fileID: 11500000, guid: a9583cd2382257740ab5869b79f22be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePanelNPC: {fileID: 1790861377}
@@ -1358,9 +1358,6 @@ MonoBehaviour:
   choices:
   - {fileID: 1375861262}
   - {fileID: 359289750}
-  timerText: {fileID: 0}
-  tempUIItem1: {fileID: 0}
-  tempUIItem2: {fileID: 0}
 --- !u!1 &1984239350
 GameObject:
   m_ObjectHideFlags: 0
