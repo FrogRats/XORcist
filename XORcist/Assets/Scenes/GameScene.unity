@@ -1506,7 +1506,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd96b3ebb12fb141bf3e881400b7d1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 1790861377}
+  dialoguePanelNPC: {fileID: 1790861377}
+  dialoguePanelPlayer: {fileID: 854097373}
   dialogueText: {fileID: 1334908852}
   continueButton: {fileID: 1269048424}
   choices:

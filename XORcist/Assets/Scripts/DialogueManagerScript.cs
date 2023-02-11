@@ -9,7 +9,8 @@ using UnityEngine.EventSystems;
 public class DialogueManagerScript : MonoBehaviour
 {
     [Header("Dialogue UI")]
-    [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject dialoguePanelNPC;
+    [SerializeField] private GameObject dialoguePanelPlayer;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Button continueButton;
 
@@ -52,7 +53,8 @@ public class DialogueManagerScript : MonoBehaviour
     private void Start()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
+        dialoguePanelNPC.SetActive(false);
+        dialoguePanelPlayer.SetActive(false);
 
 
         // Get the text for all the choices
@@ -79,7 +81,8 @@ public class DialogueManagerScript : MonoBehaviour
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-        dialoguePanel.SetActive(true);
+        dialoguePanelNPC.SetActive(true);
+        dialoguePanelPlayer.SetActive(true);
 
         ContinueStory();
     }
@@ -87,7 +90,8 @@ public class DialogueManagerScript : MonoBehaviour
     private void ExitDialogueMode()
     {
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
+        dialoguePanelNPC.SetActive(false);
+        dialoguePanelPlayer.SetActive(false);
         dialogueText.text = "";
     }
 
