@@ -2,10 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gate : MonoBehaviour
+public abstract class Gate : MonoBehaviour
 {
-    public bool GetOutput(bool a, bool b) 
-    {
-        return false;
-    }
+    public abstract bool GetOutput(bool a, bool b);
 }

@@ -17,8 +17,8 @@ public class CRTLogicScript : MonoBehaviour
 
     private string currentGateName;
     private Image currentGate;
-    private ORGate ORGateScript;
-    private ANDGate ANDGateScript;
+    private Gate ORGate;
+    private Gate ANDGate;
 
     // Update is called once per frame
     void Awake()
@@ -58,12 +58,12 @@ public class CRTLogicScript : MonoBehaviour
         switch (currentGateName) {
 
             case "ORGate":
-                ORGateScript = Gates[1].GetComponent<ORGate>();
-                return ORGateScript.GetOutput(inputA, inputB);
+                ORGate = Gates[1].GetComponent<ORGate>();
+                return ORGate.GetOutput(inputA, inputB);
 
             case "ANDGate":
-                ANDGateScript = Gates[2].GetComponent<ANDGate>();
-                return ANDGateScript.GetOutput(inputA, inputB);
+                ANDGate = Gates[2].GetComponent<ANDGate>();
+                return ANDGate.GetOutput(inputA, inputB);
 
             default: return true;
 

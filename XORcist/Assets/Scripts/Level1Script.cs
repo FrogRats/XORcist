@@ -33,11 +33,9 @@ public class Level1Script : MonoBehaviour
     private void CRTMonitorLogic() {
         // First CRT Monitor
         currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
-        Debug.Log("First Monitor: " + currentStatus);
 
         // Second CRT Monitor
         currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
-        Debug.Log("Second Monitor: " + currentStatus);
 
         // Final NOT Gate
         Debug.Log(!currentStatus);
