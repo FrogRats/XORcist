@@ -43,19 +43,19 @@ public class Level2Script : MonoBehaviour
     private void CRTMonitorLogic()
     {
         // First CRT Monitor
-        currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
+        currentStatus = CRTScript.getCurrentGateOutput(CRTScript.getCurrentGate(), inputA, inputB);
 
         // Second CRT Monitor
-        currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
+        currentStatus = CRTScript2.getCurrentGateOutput(CRTScript.getCurrentGate(), currentStatus, inputC);
 
         // NOT Inversion
         currentStatus = !currentStatus;
 
         // Third CRT Monitor
-        currentStatus = CRTScript3.getCurrentGateOutput(currentStatus, inputD);
+        currentStatus = CRTScript3.getCurrentGateOutput(CRTScript.getCurrentGate(), currentStatus, inputD);
 
         // Fourth CRT Monitor
-        currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, inputE);
+        currentStatus = CRTScript4.getCurrentGateOutput(CRTScript.getCurrentGate(), currentStatus, inputE);
 
         Debug.Log(currentStatus);
     }

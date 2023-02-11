@@ -18,13 +18,15 @@ public class CRTLogicScript : MonoBehaviour
     private string currentGateName;
     private Gate currentGate;
 
-    private Gate ORGate;
-    private Gate ANDGate;
-
     // Update is called once per frame
     void Awake()
     {
         CRTButton.onClick.AddListener(SwitchCRTScreen);
+    }
+
+    public Gate getCurrentGate() 
+    {
+        return currentGate;
     }
 
     private void SwitchCRTScreen()
@@ -54,20 +56,9 @@ public class CRTLogicScript : MonoBehaviour
         }
     }
 
-    public bool getCurrentGateOutput(bool inputA, bool inputB) {
+    public bool getCurrentGateOutput(Gate currentGate, bool inputA, bool inputB) {
 
-        switch (currentGateName) {
+        return currentGate.GetOutput(inputA, inputB);
 
-            case "ORGate":
-                ORGate = Gates[1].GetComponent<ORGate>();
-                return ORGate.GetOutput(inputA, inputB);
-
-            case "ANDGate":
-                ANDGate = Gates[2].GetComponent<ANDGate>();
-                return ANDGate.GetOutput(inputA, inputB);
-
-            default: return true;
-
-        }
     }
 }
