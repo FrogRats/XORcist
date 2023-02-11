@@ -7,20 +7,16 @@ using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class DialogueManagerScript : MonoBehaviour
+public class IntroDialogueManager : MonoBehaviour
 {
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanelNPC;
     [SerializeField] private GameObject dialoguePanelPlayer;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Button continueButton;
-    //[SerializeField] private Image NPCImage;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
-
-    [Header("Level UI")]
-    [SerializeField] private GameObject LevelObj;
 
     private TextMeshProUGUI[] choicesText;
 
@@ -29,7 +25,7 @@ public class DialogueManagerScript : MonoBehaviour
     private bool dialogueIsPlaying;
     private string typewriterText;
 
-    private static DialogueManagerScript instance;
+    private static IntroDialogueManager instance;
 
     private void Awake()
     {
@@ -44,7 +40,7 @@ public class DialogueManagerScript : MonoBehaviour
         continueButton.onClick.AddListener(ContinueStory);
     }
 
-    public static DialogueManagerScript GetInstance()
+    public static IntroDialogueManager GetInstance()
     {
         return instance;
     }
@@ -54,7 +50,6 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanelNPC.SetActive(false);
         dialoguePanelPlayer.SetActive(false);
-        LevelObj.SetActive(false);
 
         // Get the text for all the choices
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -82,8 +77,6 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanelNPC.SetActive(true);
         dialoguePanelPlayer.SetActive(true);
-        LevelObj.SetActive(false);
-        //NPCImage.gameObject.SetActive(true);
 
         ContinueStory();
     }
@@ -93,9 +86,8 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanelNPC.SetActive(false);
         dialoguePanelPlayer.SetActive(false);
-        LevelObj.SetActive(true);
-        //NPCImage.gameObject.SetActive(false);
         dialogueText.text = "";
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void ContinueStory()
@@ -164,7 +156,8 @@ public class DialogueManagerScript : MonoBehaviour
     {
         dialogueText.text = "";
 
-        foreach (char c in typewriterText){
+        foreach (char c in typewriterText)
+        {
             dialogueText.text += c;
             yield return new WaitForSeconds(0.02f);
         }
@@ -179,12 +172,6 @@ public class DialogueManagerScript : MonoBehaviour
 
     private void UpdateStoryVariables()
     {
-        /*
-        currentStory.ObserveVariable("Variable_Name_Here", (variableName, newValue) =>
-        {
-            tempUIItem1.text = newValue.ToString();
-            tempUIItem1.fontSize = 14;
-        });*/
     }
 }
 
