@@ -32,3 +32,6 @@ Looks like our journey has only just begun.
 
 + [Shut up and let me focus!] -> END
 + [Wow that's kinda mean dude] -> END
+
+== END ==
+" ... " 
