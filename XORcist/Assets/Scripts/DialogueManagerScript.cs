@@ -14,6 +14,7 @@ public class DialogueManagerScript : MonoBehaviour
     [SerializeField] private GameObject dialoguePanelPlayer;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private Button continueButton;
+    //[SerializeField] private Image NPCImage;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -31,6 +32,7 @@ public class DialogueManagerScript : MonoBehaviour
     private Story currentStory;
     private bool dialogueIsPlaying;
     private string typewriterText;
+    private bool currentlyTyping;
 
     private static DialogueManagerScript instance;
 
@@ -85,6 +87,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanelNPC.SetActive(true);
         dialoguePanelPlayer.SetActive(true);
+        //NPCImage.gameObject.SetActive(true);
 
         ContinueStory();
     }
@@ -94,6 +97,7 @@ public class DialogueManagerScript : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanelNPC.SetActive(false);
         dialoguePanelPlayer.SetActive(false);
+        //NPCImage.gameObject.SetActive(false);
         dialogueText.text = "";
     }
 
@@ -101,10 +105,11 @@ public class DialogueManagerScript : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            //dialogueText.text = currentStory.Continue();
+            StopCoroutine("TypewriterText");
             typewriterText = currentStory.Continue();
             StartCoroutine("TypewriterText");
             DisplayChoices();
+
         }
         else
         {
@@ -162,12 +167,14 @@ public class DialogueManagerScript : MonoBehaviour
     private IEnumerator TypewriterText()
     {
         dialogueText.text = "";
+        currentlyTyping = true;
 
         foreach (char c in typewriterText){
             dialogueText.text += c;
             yield return new WaitForSeconds(0.02f);
         }
 
+        currentlyTyping = false;
     }
 
     public void MakeChoice(int choiceIndex)
