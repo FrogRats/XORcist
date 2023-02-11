@@ -19,15 +19,6 @@ public class CRTLogicScript : MonoBehaviour
     private Image currentGate;
     private ORGate ORGateScript;
     private ANDGate ANDGateScript;
-    private bool changedGate;
-
-
-    // Update is called once per frame
-    void Awake()
-    {
-        CRTButton.onClick.AddListener(SwitchCRTScreen);
-        changedGate= false;
-    }
 
     private void SwitchCRTScreen()
     {
@@ -71,9 +62,5 @@ public class CRTLogicScript : MonoBehaviour
             default: return true;
 
         }
-    }
-
-    public bool getGateButtonStatus() {
-        return changedGate;
     }
 }
