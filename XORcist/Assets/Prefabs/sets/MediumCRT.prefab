@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3014341089360594835}
   - component: {fileID: 3014341089360594844}
   - component: {fileID: 3014341089360594845}
+  - component: {fileID: 3550627628210740205}
   m_Layer: 5
   m_Name: EmptyGate
   m_TagString: Untagged
@@ -76,6 +77,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3550627628210740205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014341089360594834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc14529c14776114fbbe0efa50984635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3014341090086142730
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +221,7 @@ GameObject:
   - component: {fileID: 3014341090163597180}
   - component: {fileID: 3014341090163597181}
   - component: {fileID: 3014341090163597182}
+  - component: {fileID: 8733600761461230093}
   m_Layer: 5
   m_Name: NORGate
   m_TagString: Untagged
@@ -273,6 +287,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8733600761461230093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014341090163597171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e601f35513c412b4284822e9b046fe9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3014341090932637194
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,11 +353,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gates:
-  - {fileID: 3014341089360594845}
-  - {fileID: 3014341090163597182}
-  - {fileID: 3014341091250976513}
+  - {fileID: 3550627628210740205}
+  - {fileID: 8733600761461230093}
+  - {fileID: 110670570088151836}
   CRTButton: {fileID: 3014341090086142731}
-  currentGate: 
 --- !u!1 &3014341091250976512
 GameObject:
   m_ObjectHideFlags: 0
@@ -343,6 +368,7 @@ GameObject:
   - component: {fileID: 3014341091250976515}
   - component: {fileID: 3014341091250976514}
   - component: {fileID: 3014341091250976513}
+  - component: {fileID: 110670570088151836}
   m_Layer: 5
   m_Name: NANDGate
   m_TagString: Untagged
@@ -408,3 +434,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &110670570088151836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3014341091250976512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb4ed30b5f870a74785e69dacac4c632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
