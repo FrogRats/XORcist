@@ -18,8 +18,6 @@ public class Level1Script : MonoBehaviour
     private CRTLogicScript CRTScript;
     private CRTLogicScript CRTScript2;
 
-    private CRTLogicScript[] CRTs;
-
     private bool inputA = true;
     private bool inputB = false;
     private bool inputC = false;
@@ -31,9 +29,6 @@ public class Level1Script : MonoBehaviour
     {
         CRTScript = CRTMonitor1.GetComponent<CRTLogicScript>();
         CRTScript2 = CRTMonitor2.GetComponent<CRTLogicScript>();
-
-        CRTs.Append(CRTScript);
-        CRTs.Append(CRTScript2);
 
         ritualButton.onClick.AddListener(CRTMonitorLogic);
     }
