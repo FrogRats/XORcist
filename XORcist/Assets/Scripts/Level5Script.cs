@@ -22,6 +22,10 @@ public class Level5Script : MonoBehaviour
     [SerializeField] Image pendingLaptop;
     [SerializeField] Image successLaptop;
 
+    [Header("Audio Sources")]
+    [SerializeField] AudioSource BGMusicIntro;
+    [SerializeField] AudioSource BGMusicMain;
+
     private CRTLogicScript CRTScript1;
     private CRTLogicScript CRTScript2;
     private CRTLogicScript CRTScript3;
@@ -55,6 +59,17 @@ public class Level5Script : MonoBehaviour
         ritualButton.onClick.AddListener(CRTMonitorLogic);
         pendingLaptop.gameObject.SetActive(true);
         successLaptop.gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (!BGMusicMain.isPlaying) 
+        {
+            if (!BGMusicIntro.isPlaying)
+            {
+                BGMusicMain.Play();
+            }
+        }
     }
 
     private void CRTMonitorLogic()
