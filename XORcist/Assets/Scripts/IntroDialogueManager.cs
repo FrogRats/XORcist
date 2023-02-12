@@ -96,15 +96,8 @@ public class IntroDialogueManager : MonoBehaviour
         {
             StopCoroutine("TypewriterText");
             typewriterText = currentStory.Continue();
-            if (typewriterText == "")
-            {
-                ExitDialogueMode();
-            }
-            else
-            {
-                StartCoroutine("TypewriterText");
-                DisplayChoices();
-            }
+            StartCoroutine("TypewriterText");
+            DisplayChoices();
         }
         else
         {
