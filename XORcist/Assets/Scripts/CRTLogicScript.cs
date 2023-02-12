@@ -30,7 +30,7 @@ public class CRTLogicScript : MonoBehaviour
 
         for (int i = 0; i < Gates.Length; i++)
         {
-            if (Gates[i].IsActive())
+            if (Gates[i].isActiveAndEnabled)
             {
                 Gates[i].gameObject.SetActive(false);
 
