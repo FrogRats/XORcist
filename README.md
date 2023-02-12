@@ -5,3 +5,5 @@ You'll battle your way through a series of challenges, solving logic gate puzzle
 
 ### How to Play
 The game is designed to be point and click for ease of use. Simply head over to the designated URL and click play! You can interact with the CRT screens by clicking on them to change the images on them. Once you've mastered that, you're all good to go. 
+
+![image](https://user-images.githubusercontent.com/56484022/218300484-d4d306ec-4e9b-4272-b504-5aad2e7bc41e.png)
