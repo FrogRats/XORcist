@@ -16,6 +16,8 @@ public class DialogueManagerScript : MonoBehaviour
     [SerializeField] private Button continueButton;
     [SerializeField] private Image NPCImage;
     [SerializeField] private Image NPCImage2;
+    [SerializeField] private TextMeshProUGUI NPCName;
+    [SerializeField] private TextMeshProUGUI NPCName2;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -85,6 +87,8 @@ public class DialogueManagerScript : MonoBehaviour
         LevelObj.SetActive(false);
         NPCImage.gameObject.SetActive(false);
         NPCImage2.gameObject.SetActive(false);
+        NPCName.gameObject.SetActive(false);
+        NPCName2.gameObject.SetActive(false);
 
         ContinueStory();
     }
@@ -97,6 +101,8 @@ public class DialogueManagerScript : MonoBehaviour
         LevelObj.SetActive(true);
         NPCImage.gameObject.SetActive(false);
         NPCImage2.gameObject.SetActive(false);
+        NPCName.gameObject.SetActive(false);
+        NPCName2.gameObject.SetActive(false);
         dialogueText.text = "";
     }
 
@@ -185,14 +191,24 @@ public class DialogueManagerScript : MonoBehaviour
         {
             if ((bool) newValue) { 
                 NPCImage.gameObject.SetActive(true);
+                NPCName.gameObject.SetActive(true);
             }
-            else { NPCImage.gameObject.SetActive(false);}
+            else { 
+                NPCImage.gameObject.SetActive(false);
+                NPCName.gameObject.SetActive(false);
+            }
         });
 
         currentStory.ObserveVariable("Show_NPC2", (variableName, newValue) =>
         {
-            if ((bool)newValue) { NPCImage2.gameObject.SetActive(true); }
-            else { NPCImage.gameObject.SetActive(false); }
+            if ((bool)newValue) { 
+                NPCImage2.gameObject.SetActive(true);
+                NPCName2.gameObject.SetActive(true);
+            }
+            else { 
+                NPCImage2.gameObject.SetActive(false);
+                NPCName2.gameObject.SetActive(false);
+            }
         });
     }
 }
