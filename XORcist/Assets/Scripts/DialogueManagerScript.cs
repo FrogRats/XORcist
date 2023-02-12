@@ -112,13 +112,22 @@ public class DialogueManagerScript : MonoBehaviour
         {
             StopCoroutine("TypewriterText");
             typewriterText = currentStory.Continue();
-            StartCoroutine("TypewriterText");
-            DisplayChoices();
+            if (typewriterText == "")
+            {
+                ExitDialogueMode();
+            }
+            else {
+                StartCoroutine("TypewriterText");
+                DisplayChoices();
+            }
+
+
+            
 
         }
         else
         {
-            ExitDialogueMode();
+            
         }
     }
 
