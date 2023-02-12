@@ -18,9 +18,8 @@ public class Level1Script : MonoBehaviour
     private CRTLogicScript CRTScript;
     private CRTLogicScript CRTScript2;
 
-    private bool inputA = true;
-    private bool inputB = false;
-    private bool inputC = false;
+    private bool t = true;
+    private bool f = false;
 
     private bool? currentStatus;
 
@@ -38,11 +37,11 @@ public class Level1Script : MonoBehaviour
 
 
         // First CRT Monitor
-        currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
+        currentStatus = CRTScript.getCurrentGateOutput(t, f);
         if (currentStatus is null) return;
 
         // Second CRT Monitor
-        currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
+        currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, f);
         if (currentStatus is null) return;
 
         // Final NOT Gate

@@ -36,11 +36,9 @@ public class Level5Script : MonoBehaviour
     private CRTLogicScript CRTScript7;
     private CRTLogicScript CRTScript8;
 
-    private bool inputA = true;
-    private bool inputB = true;
-    private bool inputC = false;
-    private bool inputD = false;
-    private bool inputE = true;
+    private bool t = true;
+    private bool f = true;
+
 
     private bool? currentStatus;
 
@@ -54,8 +52,8 @@ public class Level5Script : MonoBehaviour
         CRTScript4 = CRTMonitor4.GetComponent<CRTLogicScript>();
         CRTScript5 = CRTMonitor5.GetComponent<CRTLogicScript>();
         CRTScript6 = CRTMonitor6.GetComponent<CRTLogicScript>();
-        CRTScript7 = CRTMonitor6.GetComponent<CRTLogicScript>();
-        CRTScript8 = CRTMonitor6.GetComponent<CRTLogicScript>();
+        CRTScript7 = CRTMonitor7.GetComponent<CRTLogicScript>();
+        CRTScript8 = CRTMonitor8.GetComponent<CRTLogicScript>();
 
         ritualButton.onClick.AddListener(CRTMonitorLogic);
         pendingLaptop.gameObject.SetActive(true);
@@ -76,38 +74,41 @@ public class Level5Script : MonoBehaviour
     private void CRTMonitorLogic()
     {
         // First CRT Monitor
-        currentStatus = CRTScript1.getCurrentGateOutput(inputA, inputB);
+        currentStatus = CRTScript1.getCurrentGateOutput(t, t);
         if (currentStatus is null) return;
 
         // Second CRT Monitor
-        currentStatus = CRTScript2.getCurrentGateOutput(inputA, currentStatus);
+        currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, t);
         if (currentStatus is null) return;
 
         // NOT Inversion
         currentStatus = !currentStatus;
 
         // Third CRT Monitor
-        currentStatus = CRTScript3.getCurrentGateOutput(currentStatus, inputC);
+        currentStatus = CRTScript3.getCurrentGateOutput(currentStatus, f);
         if (currentStatus is null) return;
 
         // Fourth CRT Monitor
-        currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, inputD);
+        currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, f);
         if (currentStatus is null) return;
 
         // Fifth CRT Monitor
-        currentStatus = CRTScript5.getCurrentGateOutput(currentStatus, inputD);
+        currentStatus = CRTScript5.getCurrentGateOutput(currentStatus, f);
         if (currentStatus is null) return;
 
         // Sixth CRT Monitor
-        currentStatus = CRTScript6.getCurrentGateOutput(currentStatus, inputD);
+        currentStatus = CRTScript6.getCurrentGateOutput(currentStatus, f);
         if (currentStatus is null) return;
 
+        // NOT Inversion
+        currentStatus = !currentStatus;
+
         // Seventh CRT Monitor
-        currentStatus = CRTScript7.getCurrentGateOutput(!currentStatus, inputE);
+        currentStatus = CRTScript7.getCurrentGateOutput(currentStatus, t);
         if (currentStatus is null) return;
 
         // Eigth CRT Monitor
-        currentStatus = CRTScript8.getCurrentGateOutput(currentStatus, inputE);
+        currentStatus = CRTScript8.getCurrentGateOutput(currentStatus, t);
         if (currentStatus is null) return;
 
         if ((bool)currentStatus)
