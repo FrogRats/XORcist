@@ -14,6 +14,7 @@ public class LevelTransitionScript : MonoBehaviour
     {
         ritualButton.onClick.AddListener(FinalBossScene);
     }
+
     private void FinalBossScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
