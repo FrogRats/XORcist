@@ -22,6 +22,7 @@ public class CRTLogicScript : MonoBehaviour
     void Awake()
     {
         CRTButton.onClick.AddListener(SwitchCRTScreen);
+        currentGate = Gates[0];
     }
 
     private void SwitchCRTScreen()
