@@ -131,6 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6470156972623294547}
   - component: {fileID: 6470156972623294540}
+  - component: {fileID: 2098407998948511638}
   m_Layer: 5
   m_Name: EasyCRT
   m_TagString: Untagged
@@ -150,7 +151,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2964181469598283481}
+  - {fileID: 3515588963763016143}
   - {fileID: 3800919284247594594}
   - {fileID: 785027822449874029}
   - {fileID: 6470156971322346830}
@@ -160,7 +161,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6470156972623294540
 MonoBehaviour:
@@ -175,10 +176,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gates:
-  - {fileID: 7252116632154665654}
+  - {fileID: 9029633111936488864}
   - {fileID: 7910096746309003067}
   - {fileID: 6951386464096816415}
   CRTButton: {fileID: 6470156971322346835}
+--- !u!222 &2098407998948511638
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6470156972623294546}
+  m_CullTransparentMesh: 1
 --- !u!1001 &6787924855422062183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1130eda81d3b0214ba347bc4a81ff8ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &7276525985853274827
+--- !u!1001 &9011820548853685725
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -516,15 +525,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9054a9e4a976f3f44aee8739c8405e7a, type: 3}
---- !u!224 &2964181469598283481 stripped
+--- !u!224 &3515588963763016143 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5609667108806691858, guid: 9054a9e4a976f3f44aee8739c8405e7a, type: 3}
-  m_PrefabInstance: {fileID: 7276525985853274827}
+  m_PrefabInstance: {fileID: 9011820548853685725}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7252116632154665654 stripped
+--- !u!114 &9029633111936488864 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 26978113517324413, guid: 9054a9e4a976f3f44aee8739c8405e7a, type: 3}
-  m_PrefabInstance: {fileID: 7276525985853274827}
+  m_PrefabInstance: {fileID: 9011820548853685725}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
