@@ -5,7 +5,7 @@ It is the end of a long week of job searching when I recieve a letter in the pos
     ->Letter_Options
 
 == Letter_Options ==
-+ [It's probably fine, lets check it out!] ->END
++ [It's probably fine, lets check it out!] -> Letter_Options_Jump_To_Level
 + [I should at least read the whole letter...] ->Letter_1
 
 == Letter_1 ==
@@ -25,4 +25,10 @@ Your Uncle Jeb
 
 == Letter_Options_Two ==
 I don't remember ever having an Uncle Jeb... but I do really need a job...
-    +[Theres no harm in taking a look I guess!] ->END
++[Theres no harm in taking a look I guess!] ->Letter_Options_Jump_To_Level_2
+
+== Letter_Options_Jump_To_Level ==
+Who even reads letters these days anyway! -> END
+
+== Letter_Options_Jump_To_Level_2 ==
+Oh and it comes with a free phone??? NICE! -> END
