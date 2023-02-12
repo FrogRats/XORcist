@@ -2739,7 +2739,7 @@ GameObject:
   - component: {fileID: 2052701755}
   - component: {fileID: 2052701754}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: BG Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
