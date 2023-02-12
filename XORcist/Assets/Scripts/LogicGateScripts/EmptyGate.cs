@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EmptyGate : Gate
 {
-    public override bool? GetOutput(bool a, bool b)
+    public override bool? GetOutput(bool? a, bool? b)
     {
         return null;
     }

@@ -24,7 +24,7 @@ public class Level1Script : MonoBehaviour
     private bool inputB = false;
     private bool inputC = false;
 
-    private bool currentStatus;
+    private bool? currentStatus;
 
     // Start is called before the first frame update
     void Start()
@@ -39,16 +39,21 @@ public class Level1Script : MonoBehaviour
     }
 
     private void CRTMonitorLogic() {
+
+
+
         // First CRT Monitor
         currentStatus = CRTScript.getCurrentGateOutput(inputA, inputB);
+        if (currentStatus is null) return;
 
         // Second CRT Monitor
         currentStatus = CRTScript2.getCurrentGateOutput(currentStatus, inputC);
+        if (currentStatus is null) return;
 
         // Final NOT Gate
         currentStatus = !currentStatus;
 
-        if (currentStatus) {
+        if ((bool)currentStatus) {
             successFlame.gameObject.SetActive(true);
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

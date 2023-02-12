@@ -31,7 +31,7 @@ public class Level4Script : MonoBehaviour
     private bool inputC = true;
     private bool inputD = true;
 
-    private bool currentStatus;
+    private bool? currentStatus;
 
 
     // Start is called before the first frame update
@@ -51,23 +51,29 @@ public class Level4Script : MonoBehaviour
     {
         // First CRT Monitor
         currentStatus = CRTScript1.getCurrentGateOutput(inputA, inputB);
+        if (currentStatus is null) return;
 
         // Second CRT Monitor
         currentStatus = CRTScript2.getCurrentGateOutput(inputC, currentStatus);
+        if (currentStatus is null) return;
 
         // Third CRT Monitor
         currentStatus = CRTScript3.getCurrentGateOutput(inputD, !currentStatus);
+        if (currentStatus is null) return;
 
         // Fourth CRT Monitor
         currentStatus = CRTScript4.getCurrentGateOutput(inputD, currentStatus);
+        if (currentStatus is null) return;
 
         // Fifth CRT Monitor
         currentStatus = CRTScript5.getCurrentGateOutput(inputD, currentStatus);
+        if (currentStatus is null) return;
 
         // Sixth CRT Monitor
         currentStatus = CRTScript6.getCurrentGateOutput(inputD, currentStatus);
+        if (currentStatus is null) return;
 
-        if (currentStatus)
+        if ((bool)currentStatus)
         {
             successFlame.gameObject.SetActive(true);
 

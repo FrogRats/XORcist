@@ -42,7 +42,7 @@ public class Level5Script : MonoBehaviour
     private bool inputD = false;
     private bool inputE = true;
 
-    private bool currentStatus;
+    private bool? currentStatus;
 
 
     // Start is called before the first frame update
@@ -77,32 +77,40 @@ public class Level5Script : MonoBehaviour
     {
         // First CRT Monitor
         currentStatus = CRTScript1.getCurrentGateOutput(inputA, inputB);
+        if (currentStatus is null) return;
 
         // Second CRT Monitor
         currentStatus = CRTScript2.getCurrentGateOutput(inputA, currentStatus);
+        if (currentStatus is null) return;
 
         // NOT Inversion
         currentStatus = !currentStatus;
 
         // Third CRT Monitor
         currentStatus = CRTScript3.getCurrentGateOutput(currentStatus, inputC);
+        if (currentStatus is null) return;
 
         // Fourth CRT Monitor
         currentStatus = CRTScript4.getCurrentGateOutput(currentStatus, inputD);
+        if (currentStatus is null) return;
 
         // Fifth CRT Monitor
         currentStatus = CRTScript5.getCurrentGateOutput(currentStatus, inputD);
+        if (currentStatus is null) return;
 
         // Sixth CRT Monitor
         currentStatus = CRTScript6.getCurrentGateOutput(currentStatus, inputD);
+        if (currentStatus is null) return;
 
         // Seventh CRT Monitor
         currentStatus = CRTScript7.getCurrentGateOutput(!currentStatus, inputE);
+        if (currentStatus is null) return;
 
         // Eigth CRT Monitor
         currentStatus = CRTScript8.getCurrentGateOutput(currentStatus, inputE);
+        if (currentStatus is null) return;
 
-        if (currentStatus)
+        if ((bool)currentStatus)
         {
             pendingLaptop.gameObject.SetActive(false);
             successLaptop.gameObject.SetActive(true);

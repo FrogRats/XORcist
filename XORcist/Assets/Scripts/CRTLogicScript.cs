@@ -52,7 +52,9 @@ public class CRTLogicScript : MonoBehaviour
         }
     }
 
-    public bool? getCurrentGateOutput(bool inputA, bool inputB) {       
+    public bool? getCurrentGateOutput(bool? inputA, bool? inputB) {       
+        
+        
         return currentGate.GetOutput(inputA, inputB);
     }
 }
