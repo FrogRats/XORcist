@@ -19,6 +19,7 @@ public class Level5Script : MonoBehaviour
 
     [Header("Additional UI")]
     [SerializeField] Button ritualButton;
+    [SerializeField] GameObject successWindow;
     [SerializeField] Image pendingLaptop;
     [SerializeField] Image successLaptop;
 
@@ -106,8 +107,7 @@ public class Level5Script : MonoBehaviour
             pendingLaptop.gameObject.SetActive(false);
             successLaptop.gameObject.SetActive(true);
 
-
-           
+            successWindow.SetActive(true);
         }
     }
 }
