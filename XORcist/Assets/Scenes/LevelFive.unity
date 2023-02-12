@@ -1733,7 +1733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &931529387
 Transform:
   m_ObjectHideFlags: 0
@@ -1778,7 +1778,7 @@ MonoBehaviour:
   CRTMonitor2: {fileID: 295391408}
   CRTMonitor3: {fileID: 1800659072}
   CRTMonitor4: {fileID: 796950623}
-  CRTMonitor5: {fileID: 0}
+  CRTMonitor5: {fileID: 1085198488}
   CRTMonitor6: {fileID: 587933495}
   CRTMonitor7: {fileID: 1934031395}
   CRTMonitor8: {fileID: 1200619009}
@@ -1997,6 +1997,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1085198488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3014341090932637194, guid: 0b0875dfc5c5e144a8f106cb9d263d76, type: 3}
+  m_PrefabInstance: {fileID: 886239560}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1101637574
 PrefabInstance:
   m_ObjectHideFlags: 0
