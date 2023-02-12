@@ -98,7 +98,6 @@ public class IntroDialogueManager : MonoBehaviour
             typewriterText = currentStory.Continue();
             StartCoroutine("TypewriterText");
             DisplayChoices();
-
         }
         else
         {

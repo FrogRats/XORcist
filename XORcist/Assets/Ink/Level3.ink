@@ -40,8 +40,11 @@ VAR Show_NPC2 = false
 ==  Level_3_Tacky_4 ==
 ~ Show_NPC2 = true
 "Do you need help? I'm very helpful, just let me delete you from this file and we can get started with a clean slate!"
-+ [Woah someone's got a case of bad vibes] -> END
-+ [Have you ever considered that maybe you're the problem???] -> END
++ [Woah someone's got a case of bad vibes] -> Level_3_Tacky_5
++ [Have you ever considered that maybe you're the problem???] -> Level_3_Tacky_5
+
+==  Level_3_Tacky_5 ==
+"Your ego will be your downfall!" -> END
 
 == Bonus_Brood ==
 Hmmm yesssss .... broooding ... MHM ...

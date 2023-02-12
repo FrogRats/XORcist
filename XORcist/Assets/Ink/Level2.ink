@@ -30,5 +30,8 @@ Looks like our journey has only just begun.
 ~ Show_NPC2 = true
 "You're not Jeb ... my brother really is pathetic if he thinks you're going to be the one to stop me." 
 
-+ [Shut up and let me focus!] -> END
-+ [Wow that's kinda mean dude] -> END
++ [Shut up and let me focus!] -> Level_2_BadKarl_3
++ [Wow that's kinda mean dude] -> Level_2_BadKarl_3
+
+== Level_2_BadKarl_3 ==
+"Wow okay ... well now you've just made it awkward ..." -> END

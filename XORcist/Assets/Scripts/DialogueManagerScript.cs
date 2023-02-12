@@ -114,7 +114,6 @@ public class DialogueManagerScript : MonoBehaviour
             typewriterText = currentStory.Continue();
             StartCoroutine("TypewriterText");
             DisplayChoices();
-
         }
         else
         {

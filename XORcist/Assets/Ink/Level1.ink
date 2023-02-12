@@ -32,4 +32,7 @@ The ghost speaks with a hollow wail "My ChIlD! I KnEw YoU WoUlD CoMe! I am your 
 == Level_1_Jeb_4 == 
 "Are you ready to join the family business child?"
     +[Sure?] 
--> END
+->  Level_1_Jeb_5
+
+== Level_1_Jeb_5 ==
+"That's the spirit! (literally)" -> END
