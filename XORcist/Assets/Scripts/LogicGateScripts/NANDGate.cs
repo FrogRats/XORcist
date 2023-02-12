@@ -16,7 +16,7 @@ public class NANDGate : Gate
         
     }
 
-    public override bool GetOutput(bool a, bool b)
+    public override bool? GetOutput(bool a, bool b)
     {
         if (a == true && b == true)
         {
