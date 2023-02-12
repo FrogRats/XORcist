@@ -120,14 +120,10 @@ public class DialogueManagerScript : MonoBehaviour
                 StartCoroutine("TypewriterText");
                 DisplayChoices();
             }
-
-
-            
-
         }
         else
         {
-            
+            ExitDialogueMode();
         }
     }
 
