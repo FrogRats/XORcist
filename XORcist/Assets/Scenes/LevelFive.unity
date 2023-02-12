@@ -448,7 +448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &224676835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -456,18 +456,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224676834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.12477625, w: 0.99218494}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1984239354}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -14.336}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 173, y: -22}
-  m_SizeDelta: {x: 1240.7, y: 1168.7715}
+  m_AnchoredPosition: {x: 150, y: -8}
+  m_SizeDelta: {x: 1410.3816, y: 1283.208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224676836
 MonoBehaviour:
@@ -489,7 +489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 56571ce5b91092243906393a9b804577, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 30f289482f7842a4fb380326145d516e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1668,11 +1668,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8265391447546019525, guid: 20afb791e78f7884f9cd0dd2fc5d80e5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 439.4
+      value: 414
       objectReference: {fileID: 0}
     - target: {fileID: 8265391447546019525, guid: 20afb791e78f7884f9cd0dd2fc5d80e5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -54.3
+      value: -51
       objectReference: {fileID: 0}
     - target: {fileID: 8265391447546019525, guid: 20afb791e78f7884f9cd0dd2fc5d80e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1792,7 +1792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &854097374
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1869,7 +1869,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &931529387
 Transform:
   m_ObjectHideFlags: 0
@@ -3184,7 +3184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1790861378
 RectTransform:
   m_ObjectHideFlags: 0
